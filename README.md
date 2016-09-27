@@ -14,3 +14,5 @@ Create a Dynamo DB table (e.g. 'iot_events') with a primary key (string) called 
 ### Lambda function
 Copy-paste the code in index_unclassified.js into the 'Inline' code block in the AWS Lambda console UI.  Note that the index_classified.js handler invokes a second Lambda, which is not included here, but still shows how one Lambda can invoke another.
 
+### IoT
+The IoT event trigger simply generates an 'event' object with fields 'clickType' and 'serialNumber'.  Thus, in the handler code, there is no code for IoT configuration, because the result of the button click is the 'event' object.
